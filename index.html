@@ -1,7 +1,314 @@
-<html>
-  <head><title>Portif�lio Anderson Souza</title></head>
-  <body>
-    <h1>Meus Projetos</h1>
-    <p>Meus projetos</p>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anderson Souza - Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #2347A9, #010B28);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: left;
+    }
+
+    header h1 {
+      margin: 0.5rem 0;
+    }
+
+    header h2 {
+      margin: 0.1rem 0;
+    }
+
+	.about {
+	  display: flex;
+	  align-items: flex-start; /* alinha topo da foto com o texto */
+	  gap: 2rem; /* espaço entre foto e texto */
+	  padding: 1rem 1rem;
+	  max-width: 1000px;
+	  margin: 0 auto;
+	  flex-wrap: nowrap; /* força foto e texto na mesma linha */
+	  text-align: left;
+	  flex-wrap: wrap;
+	}
+
+	.about img {
+	  width: 220px;
+	  height: 220px;
+	  border-radius: 50%;
+	  object-fit: cover;
+	  flex-shrink: 0;
+	  order: 1;
+	}
+
+	.about-text {
+	  flex: 1;
+	  order: 2;
+	}
+
+	@media (max-width: 768px) {
+	  .about {
+		flex-direction: column; /* empilha verticalmente */
+		text-align: center; /* centraliza o texto */
+	  }
+
+	  .about img {
+		order: 2;
+		margin-top: 1rem;
+		align-self: center;
+	  }
+
+	  .about-text {
+		order: 1;
+	  }
+	}
+
+
+    .about p {
+      margin-top: 0.4em;
+      flex: 1;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      margin-bottom: 1em;
+    }
+
+	.projects {
+	  max-width: 1000px;
+	  margin: 0 auto;
+	  padding: 2rem 1rem;
+	}
+
+	.projects h2 {
+	  text-align: center;
+	  margin-bottom: 2rem;
+	}
+
+	.projects-container {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	  gap: 1.5rem;
+	}
+
+	.project-card {
+	  background-color: #f5f5f5;
+	  padding: 1.5rem;
+	  border-radius: 8px;
+	  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-between;
+	}
+
+	.project-card h3 {
+	  margin-top: 0;
+	  margin-bottom: 0.5rem;
+	}
+
+	.project-card .techs {
+	  font-size: 0.9rem;
+	  color: #555;
+	  margin-bottom: 0.75rem;
+	}
+
+	.project-card .desc {
+	  flex-grow: 1;
+	  margin-bottom: 1rem;
+	}
+
+	.project-card .btn {
+	  text-decoration: none;
+	  color: white;
+	  background-color: #2347A9;
+	  padding: 0.5rem 1rem;
+	  border-radius: 4px;
+	  text-align: center;
+	  transition: background-color 0.2s ease;
+	}
+
+	.project-card .btn:hover {
+	  background-color: #1a3690;
+	}
+
+
+    footer {
+      text-align: center;
+      padding: 0.1rem;
+      background-color: #ddd;
+      margin-top: 0.1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5em;
+    }
+
+	.github-link {
+	  display: inline-flex;
+	  align-items: center;
+	  justify-content: center;
+	  width: 40px;
+	  height: 40px;
+	  border-radius: 8px;
+	  transition: transform 0.2s;
+	}
+
+	.github-link:hover {
+	  transform: scale(1.1);
+	}
+
+    .btn {
+	  padding: 0.6rem 1rem;
+	  background-color: #24292e;
+	  color: white;
+	  font-weight: bold;
+	  text-decoration: none;
+	  border-radius: 5px;
+	  transition: background-color 0.3s;
+	  margin-top: 0.5em;
+	  margin-right: 0.5em;
+	}
+
+	.btn img {
+	  height: 20px;
+	  width: 20px;
+	  margin-right: 8px;
+	  vertical-align: middle;
+	}
+
+	.btn:hover {
+	  background-color: #444c56;
+	}
+
+	.btn-inverte {
+	  background-color: white;
+	}
+
+    .social-icons {
+	  display: inline-flex;
+	  align-items: center;
+	  padding: 0.6rem 1rem;
+	  border-radius: 5px;
+	  gap: 0.5em;
+	  transition: background-color 0.3s;
+	}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <section class="about">
+    <img src="profile.jpg" alt="Foto de Anderson Souza">
+    <div class="about-text">
+      <h1>Anderson Souza</h1>
+      <h2>Especialista Full-Stack Dev</h2>
+      <p>
+	    Análise de Dados • Python • Pandas<br>
+	    API Restful • .NET C# • Selenium Automação de Testes • MAUI (Mobile) | React | Git<br>
+        SOLID • Scrum
+      </p>
+
+	  <a class="btn" href="#projetos">
+	   <img src="project.svg" alt="" class="btn-inverte">
+	   Projetos
+	  </a>
+
+      <a class="btn" href="https://github.com/anderson-asouza" target="_blank">
+        <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 8px;">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68.003 1.36.092 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+        GitHub
+      </a>
+
+    </div>
+  </section>
+</header>
+
+<p>Sou profissional com sólida experiência em desenvolvimento de sistemas em Delphi, com mais de 10 anos atuando em projetos robustos, principalmente em ambientes desktop, utilizando arquitetura POO, MVC, e seguindo boas práticas como SOLID e Clean Code.
+Ao longo da minha trajetória, participei de integrações de sistemas com APIs, automação de processos com C# e Web Robots, e atuei também na gestão de TI, o que me proporcionou uma visão completa de tecnologia e negócios.
+Em minha última experiência na FEMAR, além de desenvolver sistemas em Delphi, fui responsável pela criação e consumo de APIs e por automatizações com C#, contribuindo diretamente para a melhoria dos fluxos internos. Tenho também vivência com bancos de dados como Firebird e SQL Server, essenciais para a maioria dos projetos em Delphi.
+Acredito que posso agregar valor à empresa ao unir minha experiência prática com Delphi, capacidade de integração com novas tecnologias e visão de time, sempre com foco em entregar soluções eficientes, estáveis e alinhadas aos objetivos do negócio.</p>
+
+<section id="projetos" class="projects">
+  <h2>Meus Projetos</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>Projeto 1</h3>
+      <p class="techs">Python • Pandas • Flask</p>
+      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
+      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
+	    <img src="github.svg" alt="GitHub" width="24" height="24">
+  	  </a>
+    </div>
+
+    <div class="project-card">
+      <h3>Projeto 2</h3>
+      <p class="techs">C# • .NET • MAUI</p>
+      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
+      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
+	    <img src="github.svg" alt="GitHub" width="24" height="24">
+  	  </a>
+    </div>
+
+    <div class="project-card">
+      <h3>Projeto 3</h3>
+      <p class="techs">React • API Restful • Git</p>
+      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
+      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
+	    <img src="github.svg" alt="GitHub" width="24" height="24">
+  	  </a>
+    </div>
+
+    <div class="project-card">
+      <h3>Projeto 1</h3>
+      <p class="techs">Python • Pandas • Flask</p>
+      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
+      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
+	    <img src="github.svg" alt="GitHub" width="24" height="24">
+  	  </a>
+    </div>
+
+    <div class="project-card">
+      <h3>Projeto 2</h3>
+      <p class="techs">C# • .NET • MAUI</p>
+      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
+      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
+	    <img src="github.svg" alt="GitHub" width="24" height="24">
+  	  </a>
+    </div>
+
+    <div class="project-card">
+      <h3>Projeto 3</h3>
+      <p class="techs">React • API Restful • Git</p>
+      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
+      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
+	    <img src="github.svg" alt="GitHub" width="24" height="24">
+  	  </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Anderson Souza</p>
+  <div class="social-icons">
+	<a href="https://www.linkedin.com/in/anderson-asouza/" target="_blank">
+	  <img width="32" height="32" src="linkedin.svg" alt="GitHub">
+	</a>
+	&nbsp;
+	<a href="https://www.instagram.com/souza.anderson.1?igsh=MWw5dHkyZTFwNzk0Mw==" target="_blank">
+	  <img width="32" height="32" src="instagram.svg" alt="GitHub">
+	</a>
+
+  </div>
+</footer>
+
+</body>
 </html>
