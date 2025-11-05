@@ -6,201 +6,6 @@
   <title>Anderson Souza - Portfólio</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(90deg, #2347A9, #010B28);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: left;
-    }
-
-    header h1 {
-      margin: 0.5rem 0;
-    }
-
-    header h2 {
-      margin: 0.1rem 0;
-    }
-
-	.about {
-	  display: flex;
-	  align-items: flex-start; /* alinha topo da foto com o texto */
-	  gap: 2rem; /* espaço entre foto e texto */
-	  padding: 1rem 1rem;
-	  max-width: 1000px;
-	  margin: 0 auto;
-	  flex-wrap: nowrap; /* força foto e texto na mesma linha */
-	  text-align: left;
-	  flex-wrap: wrap;
-	}
-
-	.about img {
-	  width: 220px;
-	  height: 220px;
-	  border-radius: 50%;
-	  object-fit: cover;
-	  flex-shrink: 0;
-	  order: 1;
-	}
-
-	.about-text {
-	  flex: 1;
-	  order: 2;
-	}
-
-	@media (max-width: 768px) {
-	  .about {
-		flex-direction: column; /* empilha verticalmente */
-		text-align: center; /* centraliza o texto */
-	  }
-
-	  .about img {
-		order: 2;
-		margin-top: 1rem;
-		align-self: center;
-	  }
-
-	  .about-text {
-		order: 1;
-	  }
-	}
-
-
-    .about p {
-      margin-top: 0.4em;
-      flex: 1;
-      font-size: 1.1rem;
-      line-height: 1.4;
-      margin-bottom: 1em;
-    }
-
-	.projects {
-	  max-width: 1000px;
-	  margin: 0 auto;
-	  padding: 2rem 1rem;
-	}
-
-	.projects h2 {
-	  text-align: center;
-	  margin-bottom: 2rem;
-	}
-
-	.projects-container {
-	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	  gap: 1.5rem;
-	}
-
-	.project-card {
-	  background-color: #f5f5f5;
-	  padding: 1.5rem;
-	  border-radius: 8px;
-	  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: space-between;
-	}
-
-	.project-card h3 {
-	  margin-top: 0;
-	  margin-bottom: 0.5rem;
-	}
-
-	.project-card .techs {
-	  font-size: 0.9rem;
-	  color: #555;
-	  margin-bottom: 0.75rem;
-	}
-
-	.project-card .desc {
-	  flex-grow: 1;
-	  margin-bottom: 1rem;
-	}
-
-	.project-card .btn {
-	  text-decoration: none;
-	  color: white;
-	  background-color: #2347A9;
-	  padding: 0.5rem 1rem;
-	  border-radius: 4px;
-	  text-align: center;
-	  transition: background-color 0.2s ease;
-	}
-
-	.project-card .btn:hover {
-	  background-color: #1a3690;
-	}
-
-
-    footer {
-      text-align: center;
-      padding: 0.1rem;
-      background-color: #ddd;
-      margin-top: 0.1rem;
-      display: flex;
-      justify-content: center;
-      gap: 0.5em;
-    }
-
-	.github-link {
-	  display: inline-flex;
-	  align-items: center;
-	  justify-content: center;
-	  width: 40px;
-	  height: 40px;
-	  border-radius: 8px;
-	  transition: transform 0.2s;
-	}
-
-	.github-link:hover {
-	  transform: scale(1.1);
-	}
-
-    .btn {
-	  padding: 0.6rem 1rem;
-	  background-color: #24292e;
-	  color: white;
-	  font-weight: bold;
-	  text-decoration: none;
-	  border-radius: 5px;
-	  transition: background-color 0.3s;
-	  margin-top: 0.5em;
-	  margin-right: 0.5em;
-	}
-
-	.btn img {
-	  height: 20px;
-	  width: 20px;
-	  margin-right: 8px;
-	  vertical-align: middle;
-	}
-
-	.btn:hover {
-	  background-color: #444c56;
-	}
-
-	.btn-inverte {
-	  background-color: white;
-	}
-
-    .social-icons {
-	  display: inline-flex;
-	  align-items: center;
-	  padding: 0.6rem 1rem;
-	  border-radius: 5px;
-	  gap: 0.5em;
-	  transition: background-color 0.3s;
-	}
-
-  </style>
 </head>
 <body>
 
@@ -212,7 +17,7 @@
       <h2>Especialista Full-Stack Dev</h2>
       <p>
 	    Análise de Dados • Python • Pandas<br>
-	    API Restful • .NET C# • Selenium Automação de Testes • MAUI (Mobile) | React | Git<br>
+	    API RESTful • .NET C# • Selenium Automação de Testes • Mobile | React | Git<br>
         SOLID • Scrum
       </p>
 
@@ -232,67 +37,28 @@
   </section>
 </header>
 
-<p>Sou profissional com sólida experiência em desenvolvimento de sistemas em Delphi, com mais de 10 anos atuando em projetos robustos, principalmente em ambientes desktop, utilizando arquitetura POO, MVC, e seguindo boas práticas como SOLID e Clean Code.
-Ao longo da minha trajetória, participei de integrações de sistemas com APIs, automação de processos com C# e Web Robots, e atuei também na gestão de TI, o que me proporcionou uma visão completa de tecnologia e negócios.
-Em minha última experiência na FEMAR, além de desenvolver sistemas em Delphi, fui responsável pela criação e consumo de APIs e por automatizações com C#, contribuindo diretamente para a melhoria dos fluxos internos. Tenho também vivência com bancos de dados como Firebird e SQL Server, essenciais para a maioria dos projetos em Delphi.
-Acredito que posso agregar valor à empresa ao unir minha experiência prática com Delphi, capacidade de integração com novas tecnologias e visão de time, sempre com foco em entregar soluções eficientes, estáveis e alinhadas aos objetivos do negócio.</p>
+<section class="sobre">
+	<p>Sou desenvolvedor Full-Stack com mais de 10 anos de experiência, desenvolvimento de <b>APIs RESTful</b> robustas. Tenho sólida experiência em automação de testes e tarefas com Selenium e no <b>desenvolvimento front-end com React.js</b> para aplicações multiplataforma.</p>
+	<p>Domino <b>arquitetura MVC</b>, práticas de <b>Clean Code</b> e os princípios <b>SOLID</b>, aplicando-os em projetos que envolvem <b>integração de sistemas, aplicações corporativas</b> e <b>análise de dados</b> voltada à geração de insights.</p>
+	<p>Tenho familiaridade com <b>bancos de dados SQL Server, servidores Linux, sistemas ERP</b> e metodologias ágeis (Scrum e Kanban). Meu foco é <b>entregar soluções completas, estáveis e escaláveis</b>, com código limpo, bem estruturado e de alta qualidade.</p>
+	<blockquote class="sobre-frase">
+	   “Sou movido por desafios técnicos e pela busca constante de aprimorar a performance e a experiência do usuário.”
+    </blockquote>
+</section>
 
 <section id="projetos" class="projects">
   <h2>Meus Projetos</h2>
   <div class="projects-container">
+    
     <div class="project-card">
-      <h3>Projeto 1</h3>
-      <p class="techs">Python • Pandas • Flask</p>
-      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
-      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
+      <h3>Sistemas Tarefas API</h3>
+      <p class="techs">.NET • C# • SQL Server</p>
+      <p class="desc">API RESTful robusta para gerenciamento de tarefas, com autenticação JWT, migrations e middlewares. API Base para <a href="https://github.com/anderson-asouza/sistemas-tarefas-react" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">Sistema Tarefas FrontEnd</a> e <a href="https://github.com/anderson-asouza/" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">Sistema Tarefas Automação Selenium</a>.</p>
+      <a href="https://github.com/anderson-asouza/sistemas-tarefas-api" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
 	    <img src="github.svg" alt="GitHub" width="24" height="24">
   	  </a>
     </div>
 
-    <div class="project-card">
-      <h3>Projeto 2</h3>
-      <p class="techs">C# • .NET • MAUI</p>
-      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
-      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
-	    <img src="github.svg" alt="GitHub" width="24" height="24">
-  	  </a>
-    </div>
-
-    <div class="project-card">
-      <h3>Projeto 3</h3>
-      <p class="techs">React • API Restful • Git</p>
-      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
-      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
-	    <img src="github.svg" alt="GitHub" width="24" height="24">
-  	  </a>
-    </div>
-
-    <div class="project-card">
-      <h3>Projeto 1</h3>
-      <p class="techs">Python • Pandas • Flask</p>
-      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
-      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
-	    <img src="github.svg" alt="GitHub" width="24" height="24">
-  	  </a>
-    </div>
-
-    <div class="project-card">
-      <h3>Projeto 2</h3>
-      <p class="techs">C# • .NET • MAUI</p>
-      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
-      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
-	    <img src="github.svg" alt="GitHub" width="24" height="24">
-  	  </a>
-    </div>
-
-    <div class="project-card">
-      <h3>Projeto 3</h3>
-      <p class="techs">React • API Restful • Git</p>
-      <p class="desc">Pequena descrição do projeto, explicando o que faz e o objetivo.</p>
-      <a href="https://github.com/nome-sobrenome/projeto1" target="_blank" class="github-link" aria-label="Ver projeto no GitHub">
-	    <img src="github.svg" alt="GitHub" width="24" height="24">
-  	  </a>
-    </div>
   </div>
 </section>
 
@@ -303,7 +69,7 @@ Acredito que posso agregar valor à empresa ao unir minha experiência prática 
 	  <img width="32" height="32" src="linkedin.svg" alt="GitHub">
 	</a>
 	&nbsp;
-	<a href="https://www.instagram.com/souza.anderson.1?igsh=MWw5dHkyZTFwNzk0Mw==" target="_blank">
+	<a href="https://www.instagram.com/souza.anderson.1" target="_blank">
 	  <img width="32" height="32" src="instagram.svg" alt="GitHub">
 	</a>
 
