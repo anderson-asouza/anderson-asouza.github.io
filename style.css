@@ -121,15 +121,15 @@
 	  font-weight: bold;
 	  text-decoration: none;
 	  display: inline;
-	  position: static;	  
+	  position: static;
 	}
 
 	.project-card a:hover {
-	  text-decoration: underline; /* sublinha ao passar o mouse */
+	  text-decoration: underline;
 	}
 
 	.project-card a:visited {
-	  color: inherit; /* mantém a mesma cor mesmo após visitado */
+	  color: inherit;
 	}
 
         footer {
