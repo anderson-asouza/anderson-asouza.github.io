@@ -26,12 +26,14 @@
 	  align-items: flex-start;
 	  gap: 2rem;
 	  padding: 1rem 1rem;
-	  max-width: 1000px;
+	  max-width: 1100px;
 	  margin: 0 auto;
 	  flex-wrap: nowrap;
 	  text-align: left;
 	  flex-wrap: wrap;
 	}
+
+
 
 	.profile {
 	  display: flex;
@@ -56,7 +58,7 @@
     }
 
 	.projects {
-	  max-width: 1000px;
+	  max-width: 1100px;
 	  margin: 0 auto;
 	  padding: 2rem 1rem;
 	}
@@ -68,19 +70,20 @@
 
 	.projects-container {
 	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	  grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
 	  gap: 1.5rem;
+	  justify-content: center;
+	  width: 100%;
 	}
 
 	.project-card {
 	  background-color: #f5f5f5;
 	  padding: 1.5rem;
 	  border-radius: 8px;
-	  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.50);
 	  display: flex;
 	  flex-direction: column;
 	  justify-content: space-between;
-	  max-width: 350px;
 	}
 
 	.project-card h3 {
@@ -189,7 +192,7 @@
 	}
 
 	.sobre {
-	  max-width: 1000px;
+	  max-width: 1100px;
 	  margin: 0 auto;
 	  padding: 0.4rem 1rem;
 	  line-height: 1.6;
@@ -224,11 +227,12 @@
 		width: 2.5em;
 	}
 
-	@media (max-width: 768px) {
-	  .about {
-		flex-direction: column;
+	@media (max-width: 600px) {
+
+      .about {
 		text-align: center;
-	  }
+		padding: 0rem 0rem;
+      }
 
 	  .about-text {
 		order: 1;
