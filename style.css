@@ -202,7 +202,7 @@
 	.sobre {
 	  max-width: 1000px;
 	  margin: 0 auto;
-	  padding: 2rem 1rem;
+	  padding: 0.4rem 1rem;
 	  line-height: 1.6;
 	}
 
@@ -219,4 +219,19 @@
 	  border-left: 4px solid #007acc;
 	  padding-left: 1em;
 	  line-height: 1.6;
+	}
+
+	.skills {
+	  display: flex;
+	  flex-wrap: wrap; 
+	  justify-content: center;
+	  align-items: center;
+	  gap: 1em;
+	  margin-top: 0em 0em 0em 0em;
+	  padding: 0em 0em 0em 0em;
+	}
+
+	.skills img {
+		transition: transform 0.2s ease;		
+		width: 2.5em;
 	}
