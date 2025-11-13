@@ -9,12 +9,12 @@
     header {
       background: linear-gradient(90deg, #2347A9, #010B28);
       color: white;
-      padding: 2rem 1rem;
+      padding: 1rem;
       text-align: left;
     }
 
     header h1 {
-      margin: 0.5rem 0;
+      margin: 0rem 0rem 0.5rem 0rem;
     }
 
     header h2 {
@@ -33,13 +33,13 @@
 	  flex-wrap: wrap;
 	}
 
-	.about img {
+	.profile {
+	  display: flex;
 	  width: 220px;
 	  height: 220px;
 	  border-radius: 50%;
 	  object-fit: cover;
 	  flex-shrink: 0;
-	  order: 1;
 	}
 
 	.about-text {
@@ -47,29 +47,12 @@
 	  order: 2;
 	}
 
-	@media (max-width: 768px) {
-	  .about {
-		flex-direction: column; /* empilha verticalmente */
-		text-align: center; /* centraliza o texto */
-	  }
-
-	  .about img {
-		order: 2;
-		margin-top: 1rem;
-		align-self: center;
-	  }
-
-	  .about-text {
-		order: 1;
-	  }
-	}
-
-    .about p {
+	.about p {
       margin-top: 0.4em;
       flex: 1;
       font-size: 1.1rem;
       line-height: 1.4;
-      margin-bottom: 1em;
+      margin-bottom: 1.3em;
     }
 
 	.projects {
@@ -107,9 +90,10 @@
 
 	.project-card .techs {
 	  font-size: 0.9rem;
+	  font-weight: bold;
 	  color: #000;
 	  border-radius: 6px;
-	  background-color:#98c4e0;
+	  background-color:#08a9f3;
 	  text-align: center;
 	  padding: 0.2em;
 	  margin-bottom: 0.75rem;
@@ -170,24 +154,29 @@
 	  border-bottom: 3px solid #3a3f45;
 	  border-right: 3px solid #3a3f45;  
 	  transition: all 0.2s ease;
-	  margin-top: 0.5em;
-	  margin-right: 0.5em;
+	  margin-right: 0.5em;	  
 	}
 
 	.btn img {
 	  height: 20px;
 	  width: 20px;
 	  margin: 0px 8px 1px 0px;
+	  padding: 0px;
 	  vertical-align: middle;
 	  align-items: center;
+	  border-radius: 50%;
 	}
 
 	.btn:hover {
 	  background-color: #444c56;
 	}
 
-	.btn-inverte {
+	.btn-inverte-cor {
 	  background-color: white;
+	  margin: 0px;
+	  padding: 0px;
+	  align-items: center;
+	  vertical-align: center; 
 	}
 
     .social-icons {
@@ -232,6 +221,33 @@
 	}
 
 	.skills img {
-		transition: transform 0.2s ease;		
 		width: 2.5em;
 	}
+
+	@media (max-width: 768px) {
+	  .about {
+		flex-direction: column;
+		text-align: center;
+	  }
+
+	  .about-text {
+		order: 1;
+	  }
+
+	  .skills {
+		gap: 0.4em;
+	  }
+
+      .skills img {
+		width: 1.9em;
+	  }
+	  
+      .profile-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+		order: 2;
+	  }	  
+	}	
