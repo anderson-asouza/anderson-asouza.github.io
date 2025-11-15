@@ -143,13 +143,13 @@
 	  transition: transform 0.2s;
 	}
 
+	.github-link:hover {
+	  transform: scale(1.1);
+	}
+
 	.github-link img {
 	  width: 24px;
 	  height: 24px;
-	}	
-
-	.github-link:hover {
-	  transform: scale(1.1);
 	}
 
 	.btn {
