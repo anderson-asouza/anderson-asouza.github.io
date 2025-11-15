@@ -92,14 +92,14 @@
 	}
 
 	.project-card .techs {
-	  font-size: 0.9rem;
+	  font-size: 1rem;
 	  font-weight: bold;
 	  color: #000;
 	  border-radius: 6px;
 	  background-color:#08a9f3;
 	  text-align: center;
 	  padding: 0.2em;
-	  margin-bottom: 0.75rem;
+	  margin: 0rem;
 	}
 
 	.project-card .desc {
@@ -142,6 +142,11 @@
 	  border-radius: 8px;
 	  transition: transform 0.2s;
 	}
+
+	.github-link img {
+	  width: 24px;
+	  height: 24px;
+	}	
 
 	.github-link:hover {
 	  transform: scale(1.1);
