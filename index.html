@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anderson Souza - Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("aDxe5hoxFxc78F5FR");
+  </script>
+</head>
+<body>
+
+<header>
+  <section class="about">
+    <div class="profile-container"><img src="profile.jpg" class="profile" alt="Foto de Anderson Souza"></div>
+    <div class="about-text">
+      <h1>Anderson Souza</h1>
+      <h2>Especialista Full-Stack Dev</h2>
+      <p>
+		API RESTful • .NET C# • Automação com Selenium • Mobile | React <br/>
+	    Python • Análise de Dados <br>
+		Git | SOLID • Scrum
+      </p>
+
+	  <a class="btn" title="Projetos" href="#projetos">
+	   <img src="project.svg" alt="">
+	   <span>Projetos</span>
+	  </a>
+
+      <a class="btn" href="https://github.com/anderson-asouza" title="GitHub" target="_blank">
+        <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle;">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68.003 1.36.092 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+        <span>GitHub</span>
+      </a>
+
+	 <a class="btn" title="Contato" onclick="abrirModalContato()">
+		<img src="mail.svg" alt="">
+		<span>Contato</span>
+	  </a>
+
+    </div>
+  </section>
+</header>
+
+<p class="skills">
+    <img src="skills/dotnet.svg" alt=".NET" title=".NET" />
+    <img src="skills/csharp.svg" alt="C#" title="C#" />
+    <img src="skills/selenium.svg" alt="Selenium Automação" title="Selenium Automação" />
+    <img src="skills/android.svg" style="transform: scale(1.25)" alt="Desenvolvimento Mobile" title="Desenvolvimento Mobile" />
+    <img src="skills/python.svg" alt="Python" title="Python" />
+	<img src="skills/react.svg" alt="React.js" title="React.js" />
+	<img src="skills/html.svg" alt="HTML" title="HTML" />
+	<img src="skills/css.svg" alt="CSS" title="CSS" />
+	<img src="skills/js.svg" alt="JavaScript" title="JavaScript" />
+	<img src="skills/ts.svg" alt="TypeScript" title="TypeScript" />
+	<img src="skills/microsoftsqlserver.svg" style="transform: scale(1.25)" alt="SQL Server" title="SQL Server" />
+    <img src="skills/mongodb.svg" style="transform: scale(1.25)" alt="Mongo DB" title="Mongo DB" />
+</p>
+
+<section class="sobre">
+  <div class="sobre-colapsado" id="sobreTexto">
+    <p>Sou desenvolvedor <strong>Full-Stack</strong>, formado em Análise e Desenvolvimento de Sistemas, com mais de 10 anos de experiência na área, criando <strong>APIs RESTful</strong> robustas, projetos que envolvem integração de sistemas e aplicações corporativas. Atuações multiplataforma, Frontend em <strong>React.js</strong>, criação de aplicativos mobile, automação de testes e tarefas com <strong>Selenium</strong>. Análise de dados voltada à geração de insights.</p>
+
+    <p>Domino <strong>arquitetura MVC</strong>, boas práticas do <strong>Clean Code</strong> e do <strong>SOLID</strong>, aplicando-os em projetos que envolvem integração de sistemas e aplicações corporativas.</p>
+
+    <p>Tenho familiaridade com bancos de dados <strong>SQL Server</strong>, <strong>Mongo DB</strong> e sistemas ERP, metodologias ágeis (Scrum e Kanban). Meu foco é <strong>entregar soluções completas, estáveis e escaláveis</strong>, com código limpo, bem estruturado e de alta qualidade.</p>
+
+    <p>Também possuo experiência com servidores Linux.</p>
+  </div>
+
+  <button class="sobre-toggle" onclick="toggleSobre()">Leia mais...</button>
+
+  <blockquote class="sobre-frase">
+    “Sou movido por desafios técnicos e pela busca constante de aprimorar a performance e a experiência do usuário.”
+  </blockquote>
+</section>
+
+<div id="modalVideo" class="modal">
+	<div class="modal-content-videos">
+		<span class="fechar-video">&times;</span>
+		<video controls autoplay></video>
+	</div>
+</div>
+
+<div id="modalFotos" class="modal">
+    <div class="modal-content-fotos">
+        <span class="fechar-foto">&times;</span>
+        <img id="fotoAtual" src="" alt="">
+		<p>
+        <button id="prevFoto">❮</button>
+        <button id="nextFoto">❯</button>
+		</p>
+    </div>
+</div>
+
+<section id="projetos" class="projects">
+  <div class="centraliza">
+  	<span class="titulo">Meus Projetos</span>
+	<a class="lnk" href="Anderson_Souza_Curriculo.pdf" title="Meu currículo em PDF" target="_blank" aria-label="Ver Meu currículo em PDF"><img src="pdf.svg" style="width: 25px;" alt="">Meu currículo</a>
+  </div>
+
+  <div class="projects-container">
+
+	<div class="project-card">
+	  <h3>Dashboard Educação, Internet e Renda</h3>
+	  <p class="techs">
+		Python • Streamlit • GeoPandas
+	  </p>
+	  <div>
+		<a href="#" class="abrir-fotos" title="Visualizar imagens do projeto"
+			data-fotos="01.png|02.png|03.png|04.png|05.png"
+			data-base="https://raw.githubusercontent.com/anderson-asouza/dash-educacao-internet-renda/main/fotos/">
+			<img class="pub-project" src="https://raw.githubusercontent.com/anderson-asouza/dash-educacao-internet-renda/main/fotos/dashboardEducacao.png" alt="Capa SistemaTarefas API" />
+		</a>
+	  </div>
+	  <p class="desc">
+        Inspirado na Pesquisa <strong>TIC Domicílios</strong> e nos <strong>censos do IBGE</strong>, este Dashboard interativo apresenta dados simulados sobre educação, internet e renda no Brasil. Inclui mapas com análise espacial e aplicação de regressão linear para tendências.
+	  </p>
+	  <div class="colunas">
+		<a href="https://github.com/anderson-asouza/dash-educacao-internet-renda" title="Repositório do projeto" target="_blank" class="github-link" aria-label="Ver repositório do projeto no GitHub">
+			<img src="github.svg" alt="" width="24" height="24">
+		</a>
+		<a href="#" class="abrir-fotos" title="Visualizar imagens do projeto" aria-label="Visualizar imagens do projeto"
+				data-fotos="01.png|02.png|03.png|04.png|05.png"
+				data-base="https://raw.githubusercontent.com/anderson-asouza/dash-educacao-internet-renda/main/fotos/">
+				<img class="icone-foto" src="picture.svg" alt="">
+		</a>
+		<div>&nbsp;</div>
+	  </div>
+	</div>
+
+	<div class="project-card">
+	  <h3>Sistema de Tarefas — API</h3>
+	  <p class="techs">.NET • C# • SQL Server</p>
+	  <div>
+		<a href="#" class="abrir-fotos" title="Visualizar imagens do projeto"
+			data-fotos="01.png|02.png|03.png"
+			data-base="https://raw.githubusercontent.com/anderson-asouza/sistema-tarefas-api/main/fotos/">
+			<img class="pub-project" src="https://raw.githubusercontent.com/anderson-asouza/sistema-tarefas-api/main/fotos/sistemaTarefasAPI.png" alt="Capa SistemaTarefas API" />
+		</a>
+	  </div>
+	  <p class="desc">
+		API RESTful robusta desenvolvida com foco em boas práticas, segurança e arquitetura limpa. Inclui autenticação JWT, Migrations com Entity Framework e middlewares personalizados. Base de integração para o
+		<a href="https://github.com/anderson-asouza/sistema-tarefas-react" target="_blank" class="github-link" aria-label="Ver repositório do projeto no GitHub">
+		  Sistema de Tarefas Frontend web</a>
+		e para o
+		<a href="https://github.com/anderson-asouza/" target="_blank" class="github-link" aria-label="Ver repositório do projeto no GitHub">
+		  Sistema de Tarefas Automação (Selenium)
+		</a>.
+	  </p>
+	  <div class="colunas">
+		<a href="https://github.com/anderson-asouza/sistema-tarefas-api" title="Repositório do projeto" target="_blank" class="github-link" aria-label="Ver repositório do projeto no GitHub">
+			<img src="github.svg" alt="">
+		</a>
+	  	<a href="#" class="abrir-fotos" title="Visualizar imagens do projeto" aria-label="Visualizar imagens do projeto"
+			data-fotos="01.png|02.png|03.png"
+			data-base="https://raw.githubusercontent.com/anderson-asouza/sistema-tarefas-api/main/fotos/">
+			<img class="icone-foto" src="picture.svg" alt="">
+		</a>
+		<div>&nbsp;</div>
+	  </div>
+	</div>
+
+	<div class="project-card">
+	  <h3>Sistema de Tarefas — Frontend</h3>
+	  <p class="techs">React.js • CSS</p>
+		<div>
+  	  	<a href="#" class="abrir-fotos" title="Visualizar imagens do projeto"
+			data-fotos="01.png|02.png|03.png|04.png"
+ 			data-base="https://raw.githubusercontent.com/anderson-asouza/sistema-tarefas-frontendweb/main/fotos/">
+			<img class="pub-project"
+				src="https://raw.githubusercontent.com/anderson-asouza/sistema-tarefas-frontendweb/main/fotos/sistemaTarefasFrontendWeb.png"
+				alt="Capa SistemaTarefas Frontend web" />
+		</a>
+		</div>
+
+	  <p class="desc">
+		Frontend web responsivo desenvolvido em React.js que consome a
+		<a href="https://github.com/anderson-asouza/sistema-tarefas-api" target="_blank" class="github-link" aria-label="Ver repositório do projeto no GitHub">
+		  API do Sistema de Tarefas
+		</a>.
+		Inclui recursos como paginação, suporte a múltiplos idiomas e exportação em PDF, com foco em desempenho e experiência do usuário.
+	  </p>
+	  <div class="colunas">
+		<a href="https://github.com/anderson-asouza/sistema-tarefas-frontendweb" title="Repositório do projeto" target="_blank" class="github-link" aria-label="Ver repositório do projeto no GitHub">
+			<img src="github.svg" alt="">
+		</a>
+  	  	<a href="#" class="abrir-fotos" title="Visualizar imagens do projeto" aria-label="Visualizar imagens do projeto"
+			data-fotos="01.png|02.png|03.png|04.png"
+ 			data-base="https://raw.githubusercontent.com/anderson-asouza/sistema-tarefas-frontendweb/main/fotos/">
+			<img class="icone-foto" src="picture.svg" alt="">
+		</a>
+		<div> &nbsp; </div>
+	  </div>
+	</div>
+
+	<div class="project-card">
+		<h3>Sistema de Tarefas — Automação</h3>
+		<p class="techs">.NET • C# • Selenium</p>
+		<div>
+		<a href="#" class="abrir-fotos" title="Visualizar imagens do projeto"
+			data-fotos="01.png|02.png|03.png|04.png|05.png"
+			data-base="https://raw.githubusercontent.com/anderson-asouza/sistema-tarefas-robot/main/fotos/">
+			<img class="pub-project"
+				src="https://raw.githubusercontent.com/anderson-asouza/sistema-tarefas-robot/main/fotos/sistemaTarefasRobot.png"
+				alt="Capa SistemaTarefas Robot" />
+		</a>
+		</div>
+		<p class="desc">
+			Robô web scraping para automação de teste e tarefas, desenvolvido em C# com Selenium, responsável por executar testes end-to-end e validar fluxos completos do
+			<a href="https://github.com/anderson-asouza/sistema-tarefas-react" target="_blank" class="github-link">
+			Sistema de Tarefas Frontend web</a>,
+			que por sua vez integra com a
+			<a href="https://github.com/anderson-asouza/sistema-tarefas-api" target="_blank" class="github-link">
+			API do Sistema de Tarefas</a>.
+		</p>
+		<div class="colunas">
+			<a href="https://github.com/anderson-asouza/sistema-tarefas-robot" title="Repositório do projeto" target="_blank" class="github-link" aria-label="Ver repositório do projeto no GitHub">
+				<img src="github.svg" alt="">
+			</a>
+			<a href="#" class="abrir-fotos" title="Visualizar imagens do projeto" aria-label="Visualizar imagens do projeto"
+			data-fotos="01.png|02.png|03.png|04.png|05.png"
+			data-base="https://raw.githubusercontent.com/anderson-asouza/sistema-tarefas-robot/main/fotos/">
+				<img class="icone-foto" src="picture.svg" alt="">
+			</a>
+			<a href="#" class="abrir-video" title="Assistir vídeo do projeto" aria-label="Assistir vídeo do projeto"
+			data-video="https://github.com/anderson-asouza/sistema-tarefas-robot/releases/download/v1.0/SistemaTarefasRobot.mp4">
+				<img src="movie.svg" alt="">
+			</a>
+		</div>
+	</div>
+
+  </div>
+</section>
+
+<div id="modalContato" class="modal-contato">
+  <div class="modal-contato-content">
+    <span class="fechar-contato" onclick="fecharModalContato()">&times;</span>
+
+    <h2>Entre em contato</h2>
+    <p>Tire uma dúvida, envie sugestões ou apenas diga olá 😊</p>
+
+    <label for="contato">Contato de retorno (E-mail/WhatsApp)</label>
+    <input type="text" id="contato" placeholder="Escreva um E-mail ou Wahtsapp para contato">
+
+    <label for="assunto">Assunto</label>
+    <input type="text" id="assunto" placeholder="Escreve o atunto para sua mensagem">
+
+    <label for="mensagem">Mensagem</label>
+    <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem..."></textarea>
+
+    <button id="enviar" class="btn-enviar-contato" onclick="enviarEmailContato()">Enviar</button>
+
+    <p id="feedback-contato" style="margin-top:1em; text-align:center;"></p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Anderson Souza</p>
+  <div class="social-icons">
+	<a href="https://github.com/anderson-asouza/" target="_blank">
+	  <img width="28" height="28" src="github.svg" alt="GitHub - Repositórios">
+	</a>
+	<a href="https://www.linkedin.com/in/anderson-asouza/" target="_blank">
+	  <img width="34" height="34" src="linkedin.svg" alt="Linkedin">
+	</a>
+	<a href="https://www.instagram.com/souza.anderson.1" target="_blank">
+	  <img width="32" height="32" src="instagram.svg" alt="Instagram">
+	</a>
+  </div>
+</footer>
+</body>
+</html>
