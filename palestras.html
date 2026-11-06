@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anderson Souza - Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+
+<header>
+  <section class="about">
+    <div class="profile-container"><img src="profile.jpg" class="profile" alt="Foto de Anderson Souza"></div>
+    <div class="about-text">
+      <h1>Anderson Souza</h1>
+      <h2>Especialista Full-Stack Dev</h2>
+      <p>
+		.NET C# • API RESTful • Automação • Mobile<br/>
+	    Python • Análise de Dados <br>
+		React | SOLID • Scrum
+      </p>
+
+      <a class="btn" title="Homepage" href="index.html"
+		onclick="if (window.opener) { window.close(); return false; }">
+			<img src="home.svg" alt="Homepage">
+			<span>Homepage</span>
+	  </a>
+
+    </div>
+  </section>
+</header>
+
+<div id="modalFotos" class="modal">
+    <div class="modal-content-fotos">
+        <span class="fechar-foto">&times;</span>
+        <img id="fotoAtual" src="" alt="">
+		<p>
+        <button id="prevFoto">❮</button>
+        <button id="nextFoto">❯</button>
+		</p>
+    </div>
+</div>
+
+<section id="palestras" class="projects">
+  <div class="centraliza">
+  	<span class="titulo">Palestras Ministradas</span>
+  </div>
+
+  <section id="palestra20261013">
+	<div class="palestra-card">	
+	  <p class="titulo">
+		 Estratégias e Competências Profissionais Aplicadas ao Mercado da Computação
+	  </p>
+	  <div class="colunas">
+      <div>
+      <a href="#" class="abrir-fotos" title="Visualizar imagens da palestra"
+        data-fotos="01.jpg|02.jpg|03.jpg|04.jpg|05.jpg"
+        data-base="https://raw.githubusercontent.com/anderson-asouza/anderson-asouza.github.io/main/palestras/20261013/">			
+        <img class="pub-project" src="https://raw.githubusercontent.com/anderson-asouza/anderson-asouza.github.io/main/palestras/20261013/00.jpg" alt="Banner Palestra" />
+      </a>
+      </div>
+      <div>
+        <p><strong>Descrição: </strong>Compartilhamento de experiências profissionais sobre os desafios e as oportunidades da carreira em Computação, destacando a importância das competências técnicas e comportamentais para a formação e o desenvolvimento profissional.</p>
+        <p><strong>Local/Data: </strong>Universidade de Vassouras - Campus Maricá, 13/10/2026</p>
+        <p><strong>Público: </strong>Estudantes de Computação</p>
+        <a href="#" class="abrir-fotos" title="Visualizar imagens da palestra"
+          data-fotos="01.jpg|02.jpg|03.jpg|04.jpg|05.jpg"
+          data-base="https://raw.githubusercontent.com/anderson-asouza/anderson-asouza.github.io/main/palestras/20261013/">			
+          <img class="icone-foto" src="picture.svg" alt="">
+        </a>
+      </div>
+	  </div>
+	</div>
+  </section>  
+
+</section>
+
+<footer>
+  <p>
+    &copy; 2025<span id="year"></span> Anderson Souza
+  </p>
+  <div class="social-icons">
+	<a href="https://github.com/anderson-asouza/" target="_blank">
+	  <img width="28" height="28" src="github.svg" alt="GitHub - Repositórios">
+	</a>
+	<a href="https://www.linkedin.com/in/anderson-asouza/" target="_blank">
+	  <img width="34" height="34" src="linkedin.svg" alt="Linkedin">
+	</a>
+	<a href="https://www.instagram.com/souza.anderson.1" target="_blank">
+	  <img width="32" height="32" src="instagram.svg" alt="Instagram">
+	</a>
+  </div>
+</footer>
+
+<script>
+  const currentYear = new Date().getFullYear();
+
+  if (currentYear > 2025) {
+    document.getElementById("year").textContent = `–${currentYear}`;
+  }
+</script>
+</body>
+</html>
